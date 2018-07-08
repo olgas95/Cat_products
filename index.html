@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Тестовое задание</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
+</head>
+<body>
+    <div class="container">
+        <p class="header">Ты сегодня покормил кота?</p>
+        <div class="flexBox">
+            <div class="box" onmouseenter="mouseEnter(event)" onmouseleave="mouseLeave(event)">
+                <div class="leftPart"><img src="./img/Cat.png" alt="" /></div>
+                <div class="rightPart">
+                    <p>Сказочное заморское яство</p>
+                    <p>Нямушка</p>
+                    <p>c фуа-гра</p>
+                    <p><b>10</b> порций <br />мышь в подарок</p>
+                </div>
+                <p class="txt" alternativeContent="Печень утки разварная с артишоками">Чего сидишь? Порадуй котэ, <a>купи.</a></p>
+                <div class="ellips">
+                    <p>0,5</p>
+                    <p>кг</p>
+                </div>
+            </div>
+
+            <div class="box selected" onmouseenter="mouseEnter(event)" onmouseleave="mouseLeave(event)">
+                <div class="leftPart"><img src="./img/Cat.png" alt="" /></div>
+                <div class="rightPart">
+                    <p>Сказочное заморское яство</p>
+                    <p>Нямушка</p>
+                    <p>c рыбой</p>
+                    <p><b>40</b> порций <br /><b>2</b> мыши в подарок</p>
+                </div>
+                <p class="txt txtSelected" alternativeContent="Головы щучьи с чесноком да свежайшая семгушка">Головы щучьи с чесноком да свежайшая семгушка</p>
+                <div class="ellips">
+                    <p>2</p>
+                    <p>кг</p>
+                </div>
+            </div>
+
+            <div class="box disabled">
+                <div class="leftPart"><img src="./img/Cat.png" alt="" /></div>
+                <div class="rightPart">
+                <p>Сказочное заморское яство</p>
+                <p>Нямушка</p>
+                <p>c курой</p>
+                <p><b>100</b> порций <br /><b>5</b> мышей в подарок<br />заказчик доволен</p>
+            </div>
+            <p class="txt txtDisabled" alternativeContent="Филе из цыплят с трюфелями в бульоне">Печалька, с курой закончился</p>
+            <div class="ellips">
+                <p>5</p>
+                <p>кг</p>
+            </div>
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+</html>

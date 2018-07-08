@@ -1,0 +1,211 @@
+@font-face {
+    font-family: Exo;
+    src: url(../fonts/Exo2.0-Thin.otf);
+}
+@font-face {
+    font-family: Trebuchet;
+    src: url(../fonts/Trebuchet-MS.ttf);
+}
+
+html,body{
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+}
+body{
+    margin: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url(../img/Pattern.jpg);
+    background-size: cover; 
+}
+.container{
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+.container .flexBox{
+    display: inline-flex;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+}
+.container .header{
+    margin: 20px auto 0;
+    font-size: 36px;
+    color: rgba(255, 255, 255, 0.9);
+    font-family: Exo;
+    line-height: 1.4;
+}
+.container .flexBox .box{
+    width: 312px;
+    height: 472px;
+    margin: 30px auto; 
+    border-radius: 10px;
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+} 
+
+.container .flexBox .box .leftPart,
+.container .flexBox .box .rightPart,
+.container .flexBox .box .leftPart::after{
+    border:4px solid #1698d9;
+    transition: border .25s linear;
+}
+
+.container .flexBox .selected .leftPart,
+.container .flexBox .selected .rightPart,
+.container .flexBox .selected .leftPart::after{
+    border:4px solid #d91667;
+}
+
+.container .flexBox .disabled .leftPart,
+.container .flexBox .disabled .rightPart,
+.container .flexBox .disabled .leftPart::after{
+    border:4px solid #b3b3b3;
+}
+
+.container .flexBox .disabled {
+    cursor: default;
+}
+
+.container .flexBox .box .leftPart{
+    display: inline-block;
+    width: 14%;
+    height: 430px;
+    margin: 0px;
+    background: rgb(242, 242, 242);
+    border-bottom-left-radius: 10px;
+    border-top: 0;
+    border-right: 0;
+    box-sizing: border-box;
+    vertical-align: bottom;
+    z-index: 9;
+}
+
+.container .flexBox .box .leftPart img{
+    display: block;
+    position: absolute;
+    bottom:4px;
+    left: 5px;
+}
+.container .flexBox .disabled .rightPart p{
+    color: #666;
+    opacity: 0.25; 
+}
+.container .flexBox .disabled .leftPart img{
+    opacity: 0.4;
+}
+.container .flexBox .box .leftPart::after{
+    content: "";
+    height: 58px;
+    width: 36px;
+    transform: rotate(45deg);
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 0;
+    display: block;
+    position: absolute;
+    top: 6px;
+    left: 16px;
+    background: #f2f2f2;
+}
+
+.container .flexBox .box .rightPart{
+    display: inline-block;
+    width: 86%;
+    height: 100%;
+    margin: 0;
+    background: #f2f2f2;
+    border-radius: 0 10px 10px 0;
+    margin-left: -0.36em;
+    border-left: 0;
+    box-sizing: border-box;
+    vertical-align: top;
+    z-index: 9;
+}
+
+.container .flexBox .box .rightPart p{
+    text-align: left;
+    position: relative;
+    font-family: Trebuchet;
+    margin:0;
+    line-height: 1.4;
+}
+.container .flexBox .box .rightPart p:nth-of-type(1){
+    font-size: 16px; 
+    color: #555; 
+    margin-top: 16px;
+}
+.container .flexBox .box .rightPart p:nth-of-type(2){
+    font-size: 48px;
+    font-weight: bold;
+}
+.container .flexBox .box .rightPart p:nth-of-type(3){
+    font-size: 24px;
+    font-weight: bold;
+}
+.container .flexBox .box .rightPart p:nth-of-type(4){
+    font-size: 14px;
+    color: #555; 
+    margin-top: 10px;
+}
+
+.container .flexBox .box .txt{
+    margin: 10px auto;
+    text-align: center;
+    font-size: 13px;
+    color: #f2f2f2;
+    cursor: default;
+    line-height: 3;
+    font-family: Trebuchet;
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.004);
+}
+.container .flexBox .box .txtDisabled{
+    color: #ffff66;
+}
+.container .flexBox .box .txt a{
+    text-decoration: none;
+    color: #1698d9;
+    font-weight: 800;
+    cursor: pointer;
+    z-index: 99; 
+} 
+.container .flexBox .box .txt a:hover{
+border-bottom: 1px dashed #1698d9;
+}
+
+.container .flexBox .box .ellips{
+    width: 81px;
+    height: 81px;
+    background: #1698d9;
+    color: #f2f2f2;
+    text-align: center;
+    border-radius: 50%;
+    position: absolute;
+    right: 14px;
+    bottom: 14px;
+    z-index: 10; 
+    transition: background .25s linear;
+}
+
+.container .flexBox .selected .ellips{
+    background: #d91667;
+}
+.container .flexBox .disabled .ellips{
+    background: #b3b3b3;
+}
+
+.container .flexBox .box .ellips p{
+    margin: 28px auto;
+    font-family: Trebuchet;
+    line-height: 0.2;  
+}
+.container .flexBox .box .ellips p:nth-of-type(1){
+    font-size: 42px;
+}
+.container .flexBox .box .ellips p:nth-of-type(2){
+    font-size: 20px; 
+}
